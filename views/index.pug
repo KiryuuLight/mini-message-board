@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  ul
+    each message in messages 
+      li
+        p=`User : ${message.user}`
+        p=`Message : ${message.text}`
+        p=`Added : ${message.added}`
+    else
+      li There are no values
+  a(href="/new") Create new message 
+  
